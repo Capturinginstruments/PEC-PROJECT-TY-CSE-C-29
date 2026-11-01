@@ -1,0 +1,432 @@
+﻿{
+  "name": "Untitled",
+  "type": "SHARED",
+  "summary": "",
+  "description": "",
+  "tags": [],
+  "blogUrl": "",
+  "metadata": {
+    "externalId": "ndcIiepA5BlVOCKjnP7Tv"
+  },
+  "author": "Vaishnavi Patil",
+  "categories": [],
+  "pieces": [
+    "@activepieces/piece-google-sheets",
+    "@activepieces/piece-gmail"
+  ],
+  "flows": [
+    {
+      "displayName": "Untitled",
+      "trigger": {
+        "name": "trigger",
+        "valid": true,
+        "displayName": "New Row Added",
+        "nextAction": {
+          "name": "step_2",
+          "skip": false,
+          "type": "ROUTER",
+          "valid": true,
+          "children": [
+            {
+              "name": "step_3",
+              "skip": false,
+              "type": "PIECE",
+              "valid": true,
+              "settings": {
+                "input": {
+                  "cc": [],
+                  "bcc": [],
+                  "auth": "{{connections['tKVS8rcCK1JI8byU8BgkK']}}",
+                  "body": "Hi {{trigger['output']['values']['B']}}! 👋\nYou're ready for a focused 30-minute session. {{trigger['output']['values']['D']}}Let's make it productive!\n🚀 Here's your mission:\n• Pick your most important task.\n• Silence unnecessary notifications.\n• Work with full concentration for 30 minutes.\nDon't worry about doing everything at once. Focus on completing one meaningful task.\nSmall progress today leads to big results tomorrow! 🌟\nBest wishes,\nStudent Productivity Challenge Team",
+                  "draft": false,
+                  "subject": "Your 30-Minute Productivity Mission 🎯",
+                  "receiver": [
+                    "{{trigger['output']['values']['C']}}"
+                  ],
+                  "reply_to": [],
+                  "body_type": "plain_text",
+                  "attachments": []
+                },
+                "pieceName": "@activepieces/piece-gmail",
+                "actionName": "send_email",
+                "sampleData": {},
+                "pieceVersion": "0.18.3",
+                "propertySettings": {
+                  "cc": {
+                    "type": "MANUAL"
+                  },
+                  "bcc": {
+                    "type": "MANUAL"
+                  },
+                  "body": {
+                    "type": "MANUAL"
+                  },
+                  "from": {
+                    "type": "MANUAL"
+                  },
+                  "draft": {
+                    "type": "MANUAL"
+                  },
+                  "subject": {
+                    "type": "MANUAL"
+                  },
+                  "receiver": {
+                    "type": "MANUAL"
+                  },
+                  "reply_to": {
+                    "type": "MANUAL"
+                  },
+                  "body_type": {
+                    "type": "MANUAL"
+                  },
+                  "attachments": {
+                    "type": "MANUAL"
+                  },
+                  "in_reply_to": {
+                    "type": "MANUAL"
+                  },
+                  "sender_name": {
+                    "type": "MANUAL"
+                  }
+                },
+                "errorHandlingOptions": {
+                  "retryOnFailure": {
+                    "value": false
+                  },
+                  "continueOnFailure": {
+                    "value": false
+                  }
+                }
+              },
+              "displayName": "Send Email",
+              "lastUpdatedDate": "2026-11-01T19:35:15.596Z"
+            },
+            {
+              "name": "step_4",
+              "skip": false,
+              "type": "PIECE",
+              "valid": true,
+              "settings": {
+                "input": {
+                  "cc": [],
+                  "bcc": [],
+                  "auth": "{{connections['tKVS8rcCK1JI8byU8BgkK']}}",
+                  "body": "Hi{{trigger['output']['values']['B']}}!\nYour 15-minute productivity challenge starts now! 🚀\nYour planned task is:{{trigger['output']['values']['D']}}\n\nYou have 15 minutes to focus on this task. Avoid distractions, work with concentration, and do your best to make progress.\nRemember, even small achievements count!\nBest wishes,\nStudent Productivity Challenge Team",
+                  "draft": false,
+                  "subject": "Your 15-Minute Focus Challenge 🚀",
+                  "receiver": [
+                    "{{trigger['output']['values']['C']}}"
+                  ],
+                  "reply_to": [],
+                  "body_type": "plain_text",
+                  "attachments": []
+                },
+                "pieceName": "@activepieces/piece-gmail",
+                "actionName": "send_email",
+                "sampleData": {},
+                "pieceVersion": "0.18.3",
+                "propertySettings": {
+                  "cc": {
+                    "type": "MANUAL"
+                  },
+                  "bcc": {
+                    "type": "MANUAL"
+                  },
+                  "body": {
+                    "type": "MANUAL"
+                  },
+                  "from": {
+                    "type": "MANUAL"
+                  },
+                  "draft": {
+                    "type": "MANUAL"
+                  },
+                  "subject": {
+                    "type": "MANUAL"
+                  },
+                  "receiver": {
+                    "type": "MANUAL"
+                  },
+                  "reply_to": {
+                    "type": "MANUAL"
+                  },
+                  "body_type": {
+                    "type": "MANUAL"
+                  },
+                  "attachments": {
+                    "type": "MANUAL"
+                  },
+                  "in_reply_to": {
+                    "type": "MANUAL"
+                  },
+                  "sender_name": {
+                    "type": "MANUAL"
+                  }
+                },
+                "errorHandlingOptions": {
+                  "retryOnFailure": {
+                    "value": false
+                  },
+                  "continueOnFailure": {
+                    "value": false
+                  }
+                }
+              },
+              "displayName": "Send Email",
+              "lastUpdatedDate": "2026-11-01T19:35:31.477Z"
+            },
+            {
+              "name": "step_5",
+              "skip": false,
+              "type": "PIECE",
+              "valid": true,
+              "settings": {
+                "input": {
+                  "cc": [],
+                  "bcc": [],
+                  "auth": "{{connections['tKVS8rcCK1JI8byU8BgkK']}}",
+                  "body": "Hi {{trigger['output']['values']['B']}}! 👋\nExcellent! You've planned one full hour to work toward your goal. 🌟\n{{trigger['output']['values']['D']}}\nHere is your study plan:\n• Spend the first 5 minutes planning your task.\n• Use 45 minutes for focused work.\n• Use the remaining 10 minutes to review your progress and take a short break if needed.\nStay patient, avoid distractions, and focus on progress rather than perfection.\nOne focused hour can make a real difference! 💪\nBest wishes,\nStudent Productivity Challenge Team",
+                  "draft": false,
+                  "subject": "Your 1-Hour Study Power Plan 💡",
+                  "receiver": [
+                    "{{trigger['output']['values']['C']}}"
+                  ],
+                  "reply_to": [],
+                  "body_type": "plain_text",
+                  "attachments": []
+                },
+                "pieceName": "@activepieces/piece-gmail",
+                "actionName": "send_email",
+                "sampleData": {},
+                "pieceVersion": "0.18.3",
+                "propertySettings": {
+                  "cc": {
+                    "type": "MANUAL"
+                  },
+                  "bcc": {
+                    "type": "MANUAL"
+                  },
+                  "body": {
+                    "type": "MANUAL"
+                  },
+                  "from": {
+                    "type": "MANUAL"
+                  },
+                  "draft": {
+                    "type": "MANUAL"
+                  },
+                  "subject": {
+                    "type": "MANUAL"
+                  },
+                  "receiver": {
+                    "type": "MANUAL"
+                  },
+                  "reply_to": {
+                    "type": "MANUAL"
+                  },
+                  "body_type": {
+                    "type": "MANUAL"
+                  },
+                  "attachments": {
+                    "type": "MANUAL"
+                  },
+                  "in_reply_to": {
+                    "type": "MANUAL"
+                  },
+                  "sender_name": {
+                    "type": "MANUAL"
+                  }
+                },
+                "errorHandlingOptions": {
+                  "retryOnFailure": {
+                    "value": false
+                  },
+                  "continueOnFailure": {
+                    "value": false
+                  }
+                }
+              },
+              "displayName": "Send Email",
+              "lastUpdatedDate": "2026-11-01T19:35:44.450Z"
+            },
+            {
+              "name": "step_6",
+              "skip": false,
+              "type": "PIECE",
+              "valid": true,
+              "settings": {
+                "input": {
+                  "cc": [],
+                  "bcc": [],
+                  "auth": "{{connections['tKVS8rcCK1JI8byU8BgkK']}}",
+                  "body": "Hi {{trigger['output']['values']['B']}} 👋\nAmazing commitment! You've set aside two hours or more to work toward your goals. 🚀\n{{trigger['output']['values']['D']}}\nHere's how to make the most of your time:\n• Divide your work into smaller, achievable tasks.\n• Work in focused sessions with short breaks.\n• Review what you've accomplished between sessions.\n• Stay hydrated and give yourself time to recharge.\nRemember, studying longer is useful only when you also study effectively. Focus on understanding, practice, and meaningful progress.\nMake your study time count! 🌟\nBest wishes,\nStudent Productivity Challenge Team",
+                  "draft": false,
+                  "subject": "Your Extended Focus Challenge — Let's Achieve More! 🏆",
+                  "receiver": [
+                    "{{trigger['output']['values']['C']}}"
+                  ],
+                  "reply_to": [],
+                  "body_type": "plain_text",
+                  "attachments": []
+                },
+                "pieceName": "@activepieces/piece-gmail",
+                "actionName": "send_email",
+                "sampleData": {},
+                "pieceVersion": "0.18.3",
+                "propertySettings": {
+                  "cc": {
+                    "type": "MANUAL"
+                  },
+                  "bcc": {
+                    "type": "MANUAL"
+                  },
+                  "body": {
+                    "type": "MANUAL"
+                  },
+                  "from": {
+                    "type": "MANUAL"
+                  },
+                  "draft": {
+                    "type": "MANUAL"
+                  },
+                  "subject": {
+                    "type": "MANUAL"
+                  },
+                  "receiver": {
+                    "type": "MANUAL"
+                  },
+                  "reply_to": {
+                    "type": "MANUAL"
+                  },
+                  "body_type": {
+                    "type": "MANUAL"
+                  },
+                  "attachments": {
+                    "type": "MANUAL"
+                  },
+                  "in_reply_to": {
+                    "type": "MANUAL"
+                  },
+                  "sender_name": {
+                    "type": "MANUAL"
+                  }
+                },
+                "errorHandlingOptions": {
+                  "retryOnFailure": {
+                    "value": false
+                  },
+                  "continueOnFailure": {
+                    "value": false
+                  }
+                }
+              },
+              "displayName": "Send Email",
+              "lastUpdatedDate": "2026-11-01T19:36:07.954Z"
+            },
+            null
+          ],
+          "settings": {
+            "branches": [
+              {
+                "branchName": "Branch 1",
+                "branchType": "CONDITION",
+                "conditions": [
+                  [
+                    {
+                      "operator": "TEXT_EXACTLY_MATCHES",
+                      "firstValue": "{{trigger['output']['values']['G']}}",
+                      "secondValue": "30 minutes",
+                      "caseSensitive": false
+                    }
+                  ]
+                ]
+              },
+              {
+                "branchName": "Branch 2",
+                "branchType": "CONDITION",
+                "conditions": [
+                  [
+                    {
+                      "operator": "TEXT_EXACTLY_MATCHES",
+                      "firstValue": "{{trigger['output']['values']['G']}}",
+                      "secondValue": "15 minutes",
+                      "caseSensitive": false
+                    }
+                  ]
+                ]
+              },
+              {
+                "branchName": "Branch 3",
+                "branchType": "CONDITION",
+                "conditions": [
+                  [
+                    {
+                      "operator": "TEXT_EXACTLY_MATCHES",
+                      "firstValue": "{{trigger['output']['values']['G']}}",
+                      "secondValue": "1 hour",
+                      "caseSensitive": false
+                    }
+                  ]
+                ]
+              },
+              {
+                "branchName": "Branch 4",
+                "branchType": "CONDITION",
+                "conditions": [
+                  [
+                    {
+                      "operator": "TEXT_EXACTLY_MATCHES",
+                      "firstValue": "{{trigger['output']['values']['G']}}",
+                      "secondValue": "2 hours or more",
+                      "caseSensitive": false
+                    }
+                  ]
+                ]
+              },
+              {
+                "branchName": "Otherwise",
+                "branchType": "FALLBACK"
+              }
+            ],
+            "sampleData": {},
+            "executionType": "EXECUTE_FIRST_MATCH"
+          },
+          "displayName": "Router",
+          "lastUpdatedDate": "2026-11-01T19:35:00.812Z"
+        },
+        "lastUpdatedDate": "2026-11-01T19:35:00.811Z",
+        "type": "PIECE_TRIGGER",
+        "settings": {
+          "sampleData": {},
+          "propertySettings": {
+            "info": {
+              "type": "MANUAL"
+            },
+            "sheetId": {
+              "type": "MANUAL"
+            },
+            "spreadsheetId": {
+              "type": "MANUAL"
+            },
+            "includeTeamDrives": {
+              "type": "MANUAL"
+            }
+          },
+          "pieceName": "@activepieces/piece-google-sheets",
+          "pieceVersion": "0.19.3",
+          "triggerName": "googlesheets_new_row_added",
+          "input": {
+            "auth": "{{connections['kEovWnHnFddz81qxFxTlH']}}",
+            "sheetId": 420910552,
+            "spreadsheetId": "1GPWg0C6T7Wrc6mobFqVwgJmrqQaeeTB5tbA3L0WPs6s",
+            "includeTeamDrives": false
+          }
+        }
+      },
+      "valid": true,
+      "schemaVersion": "28",
+      "notes": []
+    }
+  ],
+  "status": "PUBLISHED"
+}
